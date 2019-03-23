@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+<script src="/js/form.js" type="text/javascript"></script>
+</head>
+<body>
+<form action="/user/fifthgrade" th:object="${student}" onSubmit="return fvalidate()">
+<input type="hidden" th:field=*{id} name="id">
+<span th:text="*{name}"></span>
+Math: <input type="text" name="math" id="math">
+Arabic: <input type="text" name="arabic" id="arabic">
+Islamic: <input type="text" name="islamic" id="islamic">
+National: <input type="text" name="national" id="national">
+History: <input type="text" name="history" id="history">
+Science: <input type="text" name="science" id="science">
+Computer: <input type="text" name="computer" id="computer">
+English: <input type="text" name="english" id="english">
+<input type="submit" value="Submit">
+<a th:href="@{/user/listbyacademic/{ac}(ac=*{academic})}">cancel</a>
+</form>
+</body>
+</html>

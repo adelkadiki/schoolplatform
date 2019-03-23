@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p th:text="${school}"></p>
+<table>
+<tr th:each="std : ${student}">
+<td th:text="${std.id}"></td>
+<td th:text="${std.name}"></td>
+<td><a th:href="@{/student/firstterstudentmrecord/{id}(id=${std.id})}">الجزئي الأول</a></td>
+<td><a th:href="@{/student/finaltermstudentrecord/{id}(id=${std.id})}">النهائي</a></td>
+</tr>
+</table>
+<a href="/logout">logout</a>
+<p th:text="${message}"></p>
+</body>
+</html>
+
+<!-- 
+<a th:href="@{/firsttermresult/{id}(id=${std.id})}">الجزئي الأول</a>
+<a th:href="@{finaltermresutl/{id}(id=${std.id})}">النهائي</a>
+ -->

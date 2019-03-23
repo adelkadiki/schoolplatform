@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>student recored page</h3>
+<h3 th:text="${message}"></h3>
+<a href="/user/archive">back</a>
+<table th:each="std : ${student}">
+<tr>
+<td th:text="${std.name}"></td>
+<td th:text="${std.id}"></td>
+</tr>
+
+<tr>
+<td><a th:href="@{/user/firstclassfirstterm/{id}(id=${std.id})}">الصف الأول الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/firstclassfinal/{id}(id=${std.id})}">الصف الأول الإبتدائي - النهائي</a></td>
+</tr>
+
+<tr>
+<td><a th:href="@{/user/secondclassfirstterm/{id}(id=${std.id})}">الصف  الثانى الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/secondclassfinal/{id}(id=${std.id})}">الصف  الثانى الإبتدائي - النهائي</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/thirdclassfirstterm/{id}(id=${std.id})}">الصف  الثالث الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/thirdclassfinal/{id}(id=${std.id})}">الصف  الثالث الإبتدائي - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/fourthclassfirstterm/{id}(id=${std.id})}">الصف الرابع الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/fourthclassfinal/{id}(id=${std.id})}">الصف  الرابع الإبتدائي - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/fifthclassfirstterm/{id}(id=${std.id})}">الصف الخامس الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/fifthclassfinal/{id}(id=${std.id})}">الصف  الخامس الإبتدائي - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/sixthclassfirstterm/{id}(id=${std.id})}">الصف السادس الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/sixthclassfinal/{id}(id=${std.id})}">الصف  السادس الإبتدائي - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/seventhclassfirstterm/{id}(id=${std.id})}">الصف السابع  - الجزئي الأول</a></td>
+<td><a th:href="@{/user/seventhclassfinal/{id}(id=${std.id})}">الصف  السابع - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/eighthclassfirstterm/{id}(id=${std.id})}">الصف الثامن  - الجزئي الأول</a></td>
+<td><a th:href="@{/user/eighthclassfinal/{id}(id=${std.id})}">الصف  الثامن ا- النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/ninthclassfirstterm/{id}(id=${std.id})}">الصف التاسع - الجزئي الأول</a></td>
+<td><a th:href="@{/user/ninthclassfinal/{id}(id=${std.id})}">الصف  التاسع - النهائى</a></td>
+</tr>
+</table>
+
+</body>
+</html>

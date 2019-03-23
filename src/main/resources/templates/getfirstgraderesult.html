@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<script src="/js/jquery-3.2.1.js" type="text/javascript"></script>
+<script src="/js/form.js" type="text/javascript"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>First Term exam result</h3>
+<form action="/user/updatestudentresult" th:object="${student}" id="form" onSubmit="return valid()">
+<input type="hidden" th:field="*{id}">
+<span th:text="*{name}"></span>
+Math: <input type="text" name="math" id="math">
+Arabic: <input type="text" name="arabic" id="arabic">
+Islamic: <input type="text" name="islamic" id="islamic">
+<input type="submit" value="Submit" id="bt">
+<a th:href="@{/user/listbyacademic/{ac}(ac=*{academic})}">Cancel</a>
+</form>
+
+
+</body>
+</html>

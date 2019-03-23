@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<style type="text/css" media="print">
+@page{
+size : auto;
+margin: 0;
+}
+</style>
+</head>
+<body>
+<div th:each=" t : ${term}">
+<table id="tb">
+<tr th:object="${student}" class="row">
+<td><span th:text="${year}"></span></td>
+<td th:text="*{name}"></td>
+
+</tr>
+<tr class="row">
+<td><span th:text="${school}"></span></td><td>المدرسة</td>
+</tr>
+
+<tr class="row">
+<td><span th:text="${t.math}"></span></td><td style="text-align:center;">الرياضيات</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.islamic}"></span></td><td style="text-align:center;">التربية الإسلامية</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.arabic}"></span></td><td style="text-align:center;">اللغة العربية</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.computer}"></span></td><td style="text-align:center;">الحاسوب</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.science}"></span></td><td style="text-align:center;">علوم</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.national}"></span></td><td style="text-align:center;">التربية الوطنية</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.english}"></span></td><td style="text-align:center;">اللغة الإنجليزية</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.history}"></span></td><td style="text-align:center;">التاريخ</td>
+</tr>
+<tr class="row">
+<td style="font-weight:bold; font-size:18px;">%<span th:text="${t.result}"></span></td><td style="font-weight:bold; font-size:18px;">المجموع</td>
+</tr>
+<tr class="row">
+<td><span th:text="${t.grade}"></span></td><td>التقدير</td>
+</tr>
+
+</table>
+<a th:href="@{/student/studentpage}" id="bk">Back</a>
+</div>
+<button onClick="printTable('tb')" id="bt">Print</button>
+<script type="text/javascript">
+function printTable(e){
+	document.getElementById("bt").style.display="none";
+	document.getElementById("bk").style.display="none";
+	window.print();
+	document.getElementById("bt").style.display="block";
+	document.getElementById("bk").style.display="block";
+	
+}
+</script>
+</body>
+</html>

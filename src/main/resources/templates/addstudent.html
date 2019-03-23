@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Add a new student</h3>
+
+
+<form action="/user/submitstudent">
+<input type="text" name="name">
+<select name="year">
+<option value=1>الصف الأول الإبتدائى</option>
+<option value=2>الصف الثانى الإبتدائى</option>
+<option value=3>الصف االثالث الإبتدائى</option>
+<option value=4>الصف االرابع الإبتدائى</option>
+<option value=5>الصف الخامس الإبتدائى</option>
+<option value=6>الصف السادس الإبتدائى</option>
+<option value=7>الصف السابع</option>
+<option value=8>الصف الثامن</option>
+<option value=9>الصف التاسع</option>
+</select>
+<input type="submit" name="Submit">
+</form>
+<a href="/user/home">Home</a>
+</body>
+</html>

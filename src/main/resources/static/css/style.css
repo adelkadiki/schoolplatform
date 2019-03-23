@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+#tb{
+	border: 3px solid black;
+	width: 750px;
+	font-size: 18px;
+	margin-top: 50px;
+	margin-left: 35px;
+	
+	
+}
+
+.row {
+	line-height: 35px;
+	
+}
+
+tr.row td {
+	 border-bottom:1pt solid black;
+	 text-align: center;
+	 border-left: 1px solid black;
+	 
+}
+

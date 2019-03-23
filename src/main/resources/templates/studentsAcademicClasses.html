@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Students Academic Classes</h3>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف الأول الإبتدائى')}">FirstAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف الثانى الإبتدائى')}">SecondAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف الثالث الإبتدائى')}">ThirdAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف الرابع الإبتدائى')}">ForthAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف الخامس الإبتدائى')}">FifthAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف السادس الإبتدائى')}">SixthAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف السابع')}">SeventhAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف الثامن')}">EighthAcademicYear</a><br>
+<a th:href="@{/user/listbyacademic/{ac}(ac='الصف التاسع')}">NinethAcademicYear</a><br>
+<a href="/user/home">Home</a>
+</body>
+
+</html>

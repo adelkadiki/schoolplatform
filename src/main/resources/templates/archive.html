@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="/js/form.js"></script>
+</head>
+<body>
+<a href="/user/home">home</a>
+<form action="/user/archivesearchbyname">
+<input type="text" name="name">
+<input type="submit" value="Search by name">
+<input type="submit" value="All">
+</form>
+
+<!-- student by id section -->
+
+<form action="/user/archivesearchbyid" id="form" onSubmit="return searchv()">
+<input type="text" name="id" id="stid">
+<input type="submit" value="Search by id" id="submitid">
+</form>
+<!-- search result -->
+<table class="table table-striped">
+	<tr th:each="std: ${students}">
+	<td><a th:href="@{/user/studentrecored/{id}(id=${std.id})}"  >تقرير</a></td><td th:text="${std.academic}"></td><td th:text="${std.name}"></td><td th:text="${std.id}"></td>
+		
+	</tr>
+</table>
+<p th:text="${message}"></p>
+
+</body>
+</html>

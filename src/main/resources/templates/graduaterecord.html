@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>student recored page</h3>
+<h3 th:text="${message}"></h3>
+<a href="/user/graduate">back</a>
+<table th:each="std : ${student}">
+<tr>
+<td th:text="${std.name}"></td>
+<td th:text="${std.id}"></td>
+</tr>
+
+<tr>
+
+<td><a th:href="@{/user/firstclassfinalgraduate/{id}(id=${std.id})}">الصف الأول الإبتدائي - النهائي</a></td>
+<td><a th:href="@{/user/firstclassfirsttermgraduate/{id}(id=${std.id})}">الصف الأول الإبتدائي - الجزئي الأول</a></td>
+</tr>
+
+<tr>
+<td><a th:href="@{/user/secondclassfinalgraduate/{id}(id=${std.id})}">الصف  الثانى الإبتدائي - النهائي</a></td>
+<td><a th:href="@{/user/secondclassfirsttermgraduate/{id}(id=${std.id})}">الصف  الثانى الإبتدائي - الجزئي الأول</a></td>
+
+</tr>
+<tr>
+<td><a th:href="@{/user/thirdclassfinalgraduate/{id}(id=${std.id})}">الصف  الثالث الإبتدائي - النهائى</a></td>
+<td><a th:href="@{/user/thirdclassfirsttermgraduate/{id}(id=${std.id})}">الصف  الثالث الإبتدائي - الجزئي الأول</a></td>
+
+</tr>
+<tr>
+<td><a th:href="@{/user/fourthclassfinalgraduate/{id}(id=${std.id})}">الصف  الرابع الإبتدائي - النهائى</a></td>
+<td><a th:href="@{/user/fourthclassfirsttermgraduate/{id}(id=${std.id})}">الصف الرابع الإبتدائي - الجزئي الأول</a></td>
+
+</tr>
+<tr>
+<td><a th:href="@{/user/fifthclassfirsttermgraduate/{id}(id=${std.id})}">الصف الخامس الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/fifthclassfinalgraduate/{id}(id=${std.id})}">الصف  الخامس الإبتدائي - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/sixthclassfirsttermgraduate/{id}(id=${std.id})}">الصف السادس الإبتدائي - الجزئي الأول</a></td>
+<td><a th:href="@{/user/sixthclassfinalgraduate/{id}(id=${std.id})}">الصف  السادس الإبتدائي - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/seventhclassfirsttermgraduate/{id}(id=${std.id})}">الصف السابع  - الجزئي الأول</a></td>
+<td><a th:href="@{/user/seventhclassfinalgraduate/{id}(id=${std.id})}">الصف  السابع - النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/eighthclassfirsttermgraduate/{id}(id=${std.id})}">الصف الثامن  - الجزئي الأول</a></td>
+<td><a th:href="@{/user/eighthclassfinalgraduate/{id}(id=${std.id})}">الصف  الثامن ا- النهائى</a></td>
+</tr>
+<tr>
+<td><a th:href="@{/user/ninthclassfirsttermgraduate/{id}(id=${std.id})}">الصف التاسع - الجزئي الأول</a></td>
+<td><a th:href="@{/user/ninthclassfinalgraduate/{id}(id=${std.id})}">الصف  التاسع - النهائى</a></td>
+</tr>
+</table>
+
+</body>
+</html>

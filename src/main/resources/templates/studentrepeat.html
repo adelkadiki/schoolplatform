@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form th:action="@{/user/submitrepeatedstudent}" th:object="${student}">
+<input type="hidden" th:field="*{id}" th:value="${id}">
+<input type="hidden" th:field="*{name}" th:value="${name}">
+<select th:field="*{academic}">
+<option  th:each="year : ${years}" th:value="${year}" th:text="${year}"></option>
+</select>
+<span th:text="*{id}"></span>
+<span th:text="*{name}"></span>
+<input type="submit" value="Submit">
+</form>
+
+<a href="/user/studentslist">Main</a>
+
+</body>
+</html>

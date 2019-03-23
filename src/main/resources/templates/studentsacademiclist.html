@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Students by academic list</h3>
+<p th:text="${year}"></p>
+<table>
+<tr th:each="std : ${students}">
+<td><a th:href="@{/user/firsttermbyacademic/{id}(id=${std.id})}">FirstTerm</a></td><td><a th:href="@{/user/finaltermbyacademic/{id}(id=${std.id})}">FinalTerm</a></td><td th:text="${std.name}"></td><td th:text="${std.id}"></td>
+</tr>
+</table>
+<a href="/user/home">Home</a>
+<a href="/user/studentsbyacademic">ByAcademic</a>
+
+
+
+
+
+</body>
+</html>

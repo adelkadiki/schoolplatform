@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Students by academic list</h3>
+
+
+<form th:href="@{/submittransfer}">
+<table>
+<tr th:each="std : ${students}">
+	<td th:text="${std.id}"></td><td th:text="${std.name}"></td><td><input type="checkbox" th:value="${std.id}" name="id"></td>
+</tr>
+</table>
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+</body>
+</html>

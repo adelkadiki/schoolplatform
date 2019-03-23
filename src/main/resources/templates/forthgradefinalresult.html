@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+<script src="/js/form.js" type="text/javascript"></script>
+</head>
+<body>
+<h3>first stage students page</h3>
+<form action="/user/submitforthgradefinaltoedit" th:object="${student}" onSubmit="return ftvalidate()">
+<input type="hidden" th:field=*{id} name="id">
+Math: <input type="text" name="math" id="math">
+Arabic: <input type="text" name="arabic" id="arabic">
+Islamic: <input type="text" name="islamic" id="islamic">
+national: <input type="text" name="national" id="national">
+history: <input type="text" name="history" id="history">
+science: <input type="text" name="science" id="science">
+<input type="submit" value="Submit">
+</form>
+<a href="/user/search">cancel</a>
+</body>
+</html>
